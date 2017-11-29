@@ -71,3 +71,19 @@ n9.insert_left(n10)
 n9.insert_right(n11)
 
 print("Your tree %s superbalanced" % ("is" if isSuperBalanced(n1) else "is NOT"))
+
+
+# My notes
+# This one was very difficult to grasp at the begining
+# I spend too much time trying to derive the depth at each iteration but in the end i could not
+# need more practice associating patterns
+
+# The important questions i should have asked were:
+# How do i find the depth of any given leaf?
+#   By traversing each node towards its children, leaves are those nodes w/o children
+#Need to eep track of the depth at every level, do not try to over optimize from the start
+
+#Iterative prefered over recursive, need a separate table to store the nodes AND THE DEPTH!!!
+#The table keeps the "argumets" of the otherwise iterative function, including the depth
+#save the depths when we find a leaf. here is simple, when a new leaf is found just check that it
+# does not differ for more than 1 to the previous depths, also if the depth is already found, no need to add it
